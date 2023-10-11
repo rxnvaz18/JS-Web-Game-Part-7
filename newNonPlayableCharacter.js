@@ -57,3 +57,9 @@ function newNonPlayableCharacter(x, y) {
         stop: stop
     }
 }
+
+function sleep(time){ // promisifying the file
+    return new Promise(resolve => {
+        setTimeout(resolve, time)
+    })  
+}
