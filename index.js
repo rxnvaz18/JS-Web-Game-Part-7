@@ -5,8 +5,8 @@ const pc = newPlayableCharacter(100, 110)
 const npc = newNonPlayableCharacter(50, 300)
 
 // have the NPC start walking east immediately
-async function moveNPC()  
-     {
+async function moveNPC() {
+    while (true) {
     await npc.walkNorth(1400)
     await npc.walkEast(1200)
     await npc.walkSouth(300)
@@ -14,10 +14,9 @@ async function moveNPC()
     await npc.walkSouth(1500)
     await npc.walkWest(2700)
     await npc.walkNorth(400)
+    }
 }
-
- moveNPC()
-
+moveNPC()
 //  after hours of my own research and trying to figure out how to 
 // use a while loop with this, even with reading the generator function documents I could not figure it out. 
 // //creating other instances to test other directions
